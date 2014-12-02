@@ -11,8 +11,12 @@
     %script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
     %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"}
     = stylesheet_link_tag "all"
-    = javascript_include_tag  "all"
   %body{:class => page_classes}
     = partial "partials/nav"
     = yield
     = partial "partials/footer"
+    = javascript_include_tag  "all"
+    :javascript
+      $('span.fusion').on('click', function(){
+        document.location="tel:#{phone}"
+      })    
