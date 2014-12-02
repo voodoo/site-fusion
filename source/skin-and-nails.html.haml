@@ -1,0 +1,18 @@
+.container
+  %h1 
+    Skin and Nails
+    %small.text-muted REFRESH REPAIR RENEW
+  %p Our team of professionals can perform various types of facials, chemical exfoliation treatments, and full body waxing. We specialize in glo mineral make-up and glo therapeutics skin care. We strive to deliver the best results regarding any of your skin concerns. Call or come by today for your complimentary consultation.
+
+  %h3 Facials and Skin Repair Treatments
+  = partial("partials/prices", locals: {items: prices(:facials)})
+  %h3 Professional Make-up
+  = partial("partials/prices", locals: {items: prices(:makeup)})
+  %h3 Waxing
+  = partial("partials/prices", locals: {items: prices(:wax)})
+  %h3 Manicure
+  = partial("partials/prices", locals: {items: prices(:mani)})
+  %h3 Pedicure
+  = partial("partials/prices", locals: {items: prices(:pedi)})
+  %h3 Paraffin Treatments
+  = partial("partials/prices", locals: {items: prices(:para)})  

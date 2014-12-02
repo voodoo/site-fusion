@@ -1,0 +1,12 @@
+%table.table
+  %tr
+    %th 
+      /Item
+    %th(width="30%")
+      Price
+      %small.text-muted starting at
+  - items.each do |item|
+    %tr
+      %td= item.first
+      %td
+        = "$#{item.last}"

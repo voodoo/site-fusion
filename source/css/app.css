@@ -1,0 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Michroma);
+/*.images img{
+  width:100px;
+}*/
+body {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  font-family: 'Michroma', sans-serif;
+}
+
+span.fusion{
+	font-weight:bold;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+#logo{
+	margin-top: -30px;
+}

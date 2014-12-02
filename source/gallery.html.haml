@@ -1,0 +1,28 @@
+%link{:href => "//23.253.214.114/gallery/css/blueimp-gallery.min.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+%script{:src => "//23.253.214.114/gallery/js/blueimp-gallery.min.js", :type => "text/javascript"}
+
+#blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
+  .slides
+  %h3.title
+  %a.prev ‹
+  %a.next ›
+  / %a.close ×
+  %a.play-pause
+  %ol.indicator
+
+#links
+  .container.gallery
+    %h2 Gallery
+    = partial("partials/gallery", locals: {title: "Hair and Make-up", dir: "hair", imgs: %w[color make-up-and-color highlights make-up-and-hair]})
+    = partial("partials/gallery", locals: {title: "Before and After", dir: "baa", imgs: %w[hair-cut make-over skin-care highlights hair-cut2 hair-style short-cut]})   
+    = partial("partials/gallery", locals: {title: "Pedicure", dir: "pedi", imgs: %w[foot]})        
+            
+:javascript
+  document.getElementById('links').onclick = function (event) {
+  event = event || window.event;
+  var target = event.target || event.srcElement,
+  link = target.src ? target.parentNode : target,
+  options = {index: link, event: event},
+  links = this.getElementsByTagName('a');
+  blueimp.Gallery(links, options);
+  };
