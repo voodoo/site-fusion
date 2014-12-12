@@ -6,6 +6,20 @@ set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'img'
 
+# Use relative URLs
+activate :relative_assets
+
+set :relative_links, true
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  # Optional Settings
+  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
+  # deploy.branch   = 'custom-branch' # default: gh-pages
+  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
+end
+
 ###
 # Compass
 ###
@@ -75,15 +89,15 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-activate :deploy do |deploy|
-  deploy.method = :rsync
-  deploy.host   = 'mblz.com'
-  deploy.path   = '/home/deployer/static/fusion'
-  deploy.user  = 'deployer' # no default
+# activate :deploy do |deploy|
+#   deploy.method = :rsync
+#   deploy.host   = 'mblz.com'
+#   deploy.path   = '/home/deployer/static/fusion'
+#   deploy.user  = 'deployer' # no default
 
-  # Optional Settings
-  # deploy.user  = 'tvaughan' # no default
-  # deploy.port  = 5309 # ssh port, default: 22
-  # deploy.clean = true # remove orphaned files on remote host, default: false
-  # deploy.flags = '-rltgoDvzO --no-p --del' # add custom flags, default: -avz
-end
+#   # Optional Settings
+#   # deploy.user  = 'tvaughan' # no default
+#   # deploy.port  = 5309 # ssh port, default: 22
+#   # deploy.clean = true # remove orphaned files on remote host, default: false
+#   # deploy.flags = '-rltgoDvzO --no-p --del' # add custom flags, default: -avz
+# end
