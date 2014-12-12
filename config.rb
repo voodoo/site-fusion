@@ -1,15 +1,16 @@
 require "lib/custom_helper"
 helpers CustomHelper
-activate :directory_indexes
+#activate :directory_indexes
+# Use relative URLs
+#activate :relative_assets
+
+set :relative_links, true
 
 set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'img'
 
-# Use relative URLs
-activate :relative_assets
 
-set :relative_links, true
 
 activate :deploy do |deploy|
   deploy.method = :git
