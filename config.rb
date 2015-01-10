@@ -1,8 +1,10 @@
 require "lib/custom_helper"
 helpers CustomHelper
-#activate :directory_indexes
+
+activate :directory_indexes
+
 # Use relative URLs
-#activate :relative_assets
+activate :relative_assets
 
 set :relative_links, true
 
@@ -10,6 +12,21 @@ set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'img'
 
+
+# activate :deploy do |deploy|
+#   deploy.method = :rsync
+#   deploy.host   = '104.236.159.21'
+#   deploy.port   = 5555
+#   deploy.path   = '~/static/sites/fusion'
+#   deploy.user   = 'mblz' # no default
+#   #deploy.flags  = '--exclude assets'
+
+#   # Optional Settings
+#   # deploy.user  = 'tvaughan' # no default
+#   # deploy.port  = 5309 # ssh port, default: 22
+#   # deploy.clean = true # remove orphaned files on remote host, default: false
+#   # deploy.flags = '-rltgoDvzO --no-p --del' # add custom flags, default: -avz
+# end
 
 
 activate :deploy do |deploy|
@@ -90,15 +107,3 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-# activate :deploy do |deploy|
-#   deploy.method = :rsync
-#   deploy.host   = 'mblz.com'
-#   deploy.path   = '/home/deployer/static/fusion'
-#   deploy.user  = 'deployer' # no default
-
-#   # Optional Settings
-#   # deploy.user  = 'tvaughan' # no default
-#   # deploy.port  = 5309 # ssh port, default: 22
-#   # deploy.clean = true # remove orphaned files on remote host, default: false
-#   # deploy.flags = '-rltgoDvzO --no-p --del' # add custom flags, default: -avz
-# end

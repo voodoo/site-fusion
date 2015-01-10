@@ -8,14 +8,14 @@
     today for your complimentary consultation.
 
   %h3 Facials and Skin Repair Treatments
-  = partial("partials/prices", locals: {items: prices(:facials)})
+  = partial("partials/prices", locals: {items: data.prices[:facials]})
   %h3 Professional Make-up
-  = partial("partials/prices", locals: {items: prices(:makeup)})
+  = partial("partials/prices", locals: {items: data.prices[:makeup]})
   %h3 Waxing
-  = partial("partials/prices", locals: {items: prices(:wax)})
+  = partial("partials/prices", locals: {items: data.prices[:wax]})
   %h3 Manicure
-  = partial("partials/prices", locals: {items: prices(:mani)})
+  = partial("partials/prices", locals: {items: data.prices[:mani]})
   %h3 Pedicure
-  = partial("partials/prices", locals: {items: prices(:pedi)})
+  = partial("partials/prices", locals: {items: data.prices[:pedi]})
   %h3 Paraffin Treatments
-  = partial("partials/prices", locals: {items: prices(:para)})  
+  = partial("partials/prices", locals: {items: data.prices[:para]})  

@@ -6,10 +6,10 @@
     / Always force latest IE rendering engine or request Chrome Frame
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     / Use title if it's in the page YAML frontmatter
-    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css", :rel => "stylesheet"}
-    %link(rel="shortcut icon" href="#{image_tag('icon.png')}")
-    %script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
-    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"}
+    %link{:href => "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css", :rel => "stylesheet"}
+    %link(rel="shortcut icon" href="#{url_for('/img/icon.png')}")
+    %script(src="//code.jquery.com/jquery-2.1.1.min.js")
+    %script{:src => "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"}
     = stylesheet_link_tag "all"
   %body{:class => page_classes}
     = partial "partials/nav"

@@ -7,29 +7,27 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          = link_to "/", class: "navbar-brand" do
+          = link_to "/index.html", class: "navbar-brand" do
             /%a.navbar-brand{:href => "/"} 
             = image_tag "logo.png", class: "img-responsive", id: "logo"
             /%span Fusion Salon
         .navbar-collapse.collapse
           %ul.nav.navbar-nav
-            / %li
-            /   %a{:href => "/services"} Services
+
             %li.dropdown
               %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
                 Services
                 %span.caret
               %ul.dropdown-menu{:role => "menu"}
                 %li
-                  = link_to "About", "services.html"
-                  /%a{:href => "/services"} About
+                  = link_to "About", "/services.html"
                 %li.divider
                 %li
-                  %a{:href => url_for("/skin-and-nails")} Skin &amp; Nails reall
+                  = link_to "Skin &amp; Nails", "skin-and-nails.html"
                 %li
-                  %a{:href => "/bridal"} Bridal
+                  = link_to "Bridal", "/bridal.html"
             %li
-              %a{:href => "/gallery"} Gallery
+              = link_to "Gallery", "/gallery.html"
             %li
               %a{:href => "#contact"} Contact
  
